@@ -40,12 +40,12 @@
 			</dd>
 
 			<?php $putLine =  $_REQUEST["username"].";". $_REQUEST["section"].";". $_REQUEST["credit_card"].";". $_REQUEST["cc"]."\n";
-                  file_put_contents('all_suckers.txt', $putLine, FILE_APPEND);
+                  file_put_contents('suckers.txt', $putLine, FILE_APPEND);
             ?>
 
 			<p>Here are all the suckers: </p>
 			<p>
-				<?php $list = file('all_suckers.txt') ?>
+				<?php $list = file('suckers.txt') ?>
 			<ul>
 				<?php foreach ($list as $line) { ?>
 				<li><?php print $line?></li>
